@@ -12,8 +12,8 @@ import csv
 
 def main():
     s3 = boto3.resource('s3',
-                        aws_access_key_id='AKIA3UHNQFSEAQYDQYUA',
-                        aws_secret_access_key='sEVuACjpci/vuCi4sL9Glppp78sb3I3WpT9Wuc7r'
+                        aws_access_key_id='replaceMe',
+                        aws_secret_access_key='replaceMe'
                         )
     try:
         s3.create_bucket(Bucket='bucket14848', CreateBucketConfiguration={
@@ -39,8 +39,8 @@ def main():
     '''
     dyndb = boto3.resource('dynamodb',
                            region_name='us-west-2',
-                           aws_access_key_id='AKIA3UHNQFSEAQYDQYUA',
-                           aws_secret_access_key='sEVuACjpci/vuCi4sL9Glppp78sb3I3WpT9Wuc7r'
+                           aws_access_key_id='replaceMe',
+                           aws_secret_access_key='replaceMe'
                            )
     try:
         table = dyndb.create_table(
@@ -106,7 +106,7 @@ def main():
     )
     item = response['Item']
     print(item)
-    print(response)
+    # print(response)
 
     response = table.get_item(
         Key={
@@ -116,7 +116,7 @@ def main():
     )
     item = response['Item']
     print(item)
-    print(response)
+    # print(response)
 
     response = table.get_item(
         Key={
@@ -126,7 +126,7 @@ def main():
     )
     item = response['Item']
     print(item)
-    print(response)
+    # print(response)
     return
 
 
